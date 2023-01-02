@@ -1,5 +1,5 @@
 import { createServer, Factory, Model } from 'miragejs'
-import { faker } from '@faker-js/faker'
+import faker from 'faker'
 
 type User = {
   name: string;
@@ -19,7 +19,7 @@ export function makeServer() {
           return `User ${i + 1}`
         },
         email() {
-          return  faker.internet.email().toLowerCase();
+          return faker.internet.email().toLowerCase();
         },
         createdAt() {
           return faker.date.recent(10);

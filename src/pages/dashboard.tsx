@@ -3,11 +3,13 @@ import dynamic from 'next/dynamic'
 import { Header } from "../components/Header/index";
 import { Sidebar } from "../components/Sidebar/Index";
 
+import {ApexOptions} from 'apexcharts';
+
 const Chart = dynamic(() => import('react-apexcharts'), {
   ssr: false,
 })
 
-const options = {
+const options: ApexOptions = {
   chart: {
     toolbar: {
       show: false
